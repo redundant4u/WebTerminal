@@ -1,0 +1,40 @@
+{
+    "name": "cloudshell",
+    "version": "1.0.0",
+    "description": "Cloud Shell",
+    "main": "index.tsx",
+    "repository": "https://github.com/redundant4u/CloudShell.git",
+    "author": "redundant4u",
+    "license": "MIT",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "dependencies": {
+        "react": "file:../node_modules/react",
+        "react-dom": "file:../node_modules/react-dom"
+    },
+    "devDependencies": {
+        "react-scripts": "^5.0.1"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

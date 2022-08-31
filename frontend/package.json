@@ -1,0 +1,37 @@
+{
+    "name": "cloudshell",
+    "version": "1.0.0",
+    "description": "Cloud Shell",
+    "repository": "https://github.com/redundant4u/CloudShell.git",
+    "author": "redundant4u",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "xterm": "^4.19.0",
+        "xterm-addon-fit": "^0.5.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.17",
+        "@typescript-eslint/eslint-plugin": "^5.36.0",
+        "@typescript-eslint/parser": "^5.36.0",
+        "eslint": "^8.23.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1",
+        "typescript": "^4.8.2"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
