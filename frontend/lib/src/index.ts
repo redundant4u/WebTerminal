@@ -1,3 +1,3 @@
-import CloudShell from './CloudShell';
+import WebTerminal from './WebTerminal';
 
-export default CloudShell;
+export default WebTerminal;

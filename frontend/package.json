@@ -1,15 +1,14 @@
 {
-    "name": "cloudshell",
+    "name": "webterminal",
     "version": "1.0.0",
-    "description": "Cloud Shell",
+    "description": "WebTerminal",
     "repository": "https://github.com/redundant4u/CloudShell.git",
     "author": "redundant4u",
     "license": "MIT",
     "scripts": {
         "dev": "yarn dev:lib & yarn start",
         "dev:lib": "cd lib && yarn watch",
-        "start": "react-scripts start",
-        "build": "react-scripts build"
+        "start": "react-scripts start"
     },
     "dependencies": {
         "react": "^18.2.0",

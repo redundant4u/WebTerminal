@@ -1,7 +1,7 @@
 {
-    "name": "cloudshell",
+    "name": "webterminal",
     "version": "1.0.0",
-    "description": "Cloud Shell",
+    "description": "Web Terminal Library",
     "repository": "https://github.com/redundant4u/CloudShell.git",
     "author": "redundant4u",
     "license": "MIT",
