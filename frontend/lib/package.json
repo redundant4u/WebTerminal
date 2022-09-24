@@ -1,0 +1,59 @@
+{
+    "name": "cloudshell",
+    "version": "1.0.0",
+    "description": "Cloud Shell",
+    "repository": "https://github.com/redundant4u/CloudShell.git",
+    "author": "redundant4u",
+    "license": "MIT",
+    "main": "./dist/bundle.js",
+    "types": "./src/index.d.ts",
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup --watch -c"
+    },
+    "dependencies": {
+        "xterm": "^5.0.0",
+        "xterm-addon-fit": "^0.6.0"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.18.13",
+        "@babel/preset-env": "^7.19.1",
+        "@babel/preset-react": "^7.18.6",
+        "@babel/preset-typescript": "^7.18.6",
+        "@rollup/plugin-babel": "^5.3.1",
+        "@rollup/plugin-commonjs": "^22.0.2",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^14.1.0",
+        "@rollup/plugin-typescript": "^8.5.0",
+        "@types/react": "^18.0.20",
+        "@types/react-dom": "^18.0.6",
+        "autoprefixer": "^10.4.11",
+        "node-sass": "^7.0.3",
+        "postcss": "^8.4.16",
+        "postcss-import": "^15.0.0",
+        "postcss-prefixer": "^2.1.3",
+        "rollup": "^2.79.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-terser": "^7.0.2",
+        "sass": "^1.55.0",
+        "tslib": "^2.4.0",
+        "typescript": "^4.8.3"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

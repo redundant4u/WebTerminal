@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["es2015", "es2017", "dom"],
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "baseUrl": "./",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "jsx": "react"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"],
+    "typeRoots": ["src/types"]
+}
