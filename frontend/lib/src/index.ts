@@ -1,3 +1,3 @@
-import WebTerminal from './WebTerminal';
+import WebTerminal from './components/WebTerminal';
 
 export default WebTerminal;
