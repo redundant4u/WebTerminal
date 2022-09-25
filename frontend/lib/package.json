@@ -2,7 +2,7 @@
     "name": "webterminal",
     "version": "1.0.0",
     "description": "Web Terminal Library",
-    "repository": "https://github.com/redundant4u/CloudShell.git",
+    "repository": "https://github.com/redundant4u/WebTerminal.git",
     "author": "redundant4u",
     "license": "MIT",
     "main": "./dist/bundle.js",

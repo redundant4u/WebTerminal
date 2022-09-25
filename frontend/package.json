@@ -1,8 +1,8 @@
 {
     "name": "webterminal",
     "version": "1.0.0",
-    "description": "WebTerminal",
-    "repository": "https://github.com/redundant4u/CloudShell.git",
+    "description": "WebTerminal Frontend",
+    "repository": "https://github.com/redundant4u/WebTerminal.git",
     "author": "redundant4u",
     "license": "MIT",
     "scripts": {
