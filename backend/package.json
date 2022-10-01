@@ -1,0 +1,26 @@
+{
+    "name": "webterminal-backend",
+    "version": "1.0.0",
+    "description": "WebTerminal Backend",
+    "main": "index.js",
+    "repository": "https://github.com/redundant4u/WebTerminal.git",
+    "author": "redundant4u",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "dependencies": {
+        "node-pty": "^0.10.1",
+        "socket.io": "^4.5.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.24.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "nodemon": "^2.0.20",
+        "prettier": "^2.7.1"
+    }
+}
