@@ -1,10 +1,14 @@
-const http = require('http');
+import { createServer } from 'http';
+import Socket from './Socket';
 
-const server = http.createServer((_, res) => res.end());
+const server = createServer((_, res) => res.end());
 const PORT = 3001;
 
 server.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
+
+    const socket = new Socket();
+    socket.attach(server);
 });
 
 process.on('uncaughtException', (err) => {
