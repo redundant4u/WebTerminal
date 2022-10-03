@@ -1,3 +1,10 @@
-declare const CloudShell: () => React.ReactElement;
+import { Terminal as xterm } from 'xterm';
 
-export default CloudShell;
+declare const WebTerminal: (param: {
+    socket: {
+        init: (term: xterm) => void;
+        execute: (command: string) => void;
+    };
+}) => React.ReactElement;
+
+export default WebTerminal;

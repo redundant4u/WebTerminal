@@ -12,11 +12,13 @@
     },
     "dependencies": {
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "socket.io-client": "^4.5.2"
     },
     "devDependencies": {
         "@types/react": "^18.0.20",
         "@types/react-dom": "^18.0.6",
+        "@types/socket.io-client": "^3.0.0",
         "@typescript-eslint/eslint-plugin": "^5.38.0",
         "@typescript-eslint/parser": "^5.38.0",
         "eslint": "^8.23.1",
@@ -26,7 +28,8 @@
         "postcss-normalize": "^10.0.1",
         "prettier": "^2.7.1",
         "react-scripts": "^5.0.1",
-        "typescript": "^4.8.3"
+        "typescript": "^4.8.3",
+        "xterm": "^5.0.0"
     },
     "eslintConfig": {
         "extends": [
