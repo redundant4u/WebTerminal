@@ -1,4 +1,4 @@
-import { Server } from 'socket.io';
+import { Server as SocketServer } from 'socket.io';
 import http from 'http';
 import Pty from './Pty';
 
@@ -10,7 +10,7 @@ class Socket {
             throw new Error('Server Not Found');
         }
 
-        const io = new Server(server, {
+        const io = new SocketServer(server, {
             cors: {
                 origin: '*',
                 methods: ['GET', 'POST'],

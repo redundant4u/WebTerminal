@@ -1,13 +1,13 @@
 import os from 'os';
 import pty from 'node-pty';
-import { Socket } from 'socket.io';
+import { Socket as SocketIO } from 'socket.io';
 
 class Pty {
-    socket: Socket;
+    socket: SocketIO;
     pty: pty.IPty;
     shell: string;
 
-    constructor(socket: Socket) {
+    constructor(socket: SocketIO) {
         this.socket = socket;
         this.shell = os.platform() === 'win32' ? 'cmd.exe' : 'bash';
 

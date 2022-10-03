@@ -9,7 +9,7 @@
     "private": true,
     "scripts": {
         "start": "node ./dist/index.js",
-        "dev": "nodemon index.ts",
+        "dev": "nodemon ./src/index.ts",
         "build": "tsc"
     },
     "dependencies": {
