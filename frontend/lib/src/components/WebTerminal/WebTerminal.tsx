@@ -1,9 +1,9 @@
 import { ITerminalOptions, Terminal as xterm } from 'xterm';
 import { FitAddon } from 'xterm-addon-fit';
+import { SocketConfig } from '../../constants/SocketConfig';
 
 export default class Terminal {
     term: xterm;
-
     _options: ITerminalOptions = {
         cursorBlink: true,
         scrollSensitivity: 2,
@@ -11,11 +11,15 @@ export default class Terminal {
     };
     _fitAddon: FitAddon;
     _input: number;
+    _socket: SocketConfig;
 
-    constructor() {
+    constructor(socket: SocketConfig) {
         this.term = new xterm(this._options);
         this._fitAddon = new FitAddon();
         this._input = 0;
+
+        this._socket = socket;
+        this._socket.init(this.term);
 
         this._initWebTerminal();
     }
@@ -30,9 +34,8 @@ export default class Terminal {
 
     _initWebTerminal() {
         this.term.onKey((e) => this._onKeyHandler(e));
+        this.term.onData((e) => this._onDataHandler(e));
         this.term.loadAddon(this._fitAddon);
-
-        this.term.write('$ ');
     }
 
     _onKeyHandler(e: { key: string; domEvent: KeyboardEvent }) {
@@ -47,35 +50,34 @@ export default class Terminal {
         } else if (e.domEvent.key === 'ArrowLeft') {
             this._moveLeft();
         } else if (printable) {
-            this.term.write(e.key);
             this._input++;
         }
     }
 
+    _onDataHandler(e: string) {
+        this._socket.execute(e);
+    }
+
     _enter() {
-        this.term.write('\r\n$ ');
         this._input = 0;
     }
 
     _backSpace() {
-        if (this.term.buffer.active.cursorX > 2) {
-            this.term.write('\b \b');
+        if (this.term.buffer.active.cursorX >= 10) {
+            this.term.write('\x1B[0J');
             this._input--;
         }
     }
 
     _moveRight() {
-        console.log(this.term.buffer.active.cursorX - 2);
-        console.log(this._input);
-
-        const isEnd: boolean = this.term.buffer.active.cursorX - 2 <= this._input;
+        const isEnd: boolean = this.term.buffer.active.cursorX - 10 <= this._input;
         if (!isEnd) {
             this.term.write('\x1B[C');
         }
     }
 
     _moveLeft() {
-        const isStart: boolean = this.term.buffer.active.cursorX == 2;
+        const isStart: boolean = this.term.buffer.active.cursorX >= 10;
         if (!isStart) {
             this.term.write('\x1B[D');
         }

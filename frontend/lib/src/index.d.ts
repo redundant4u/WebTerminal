@@ -1,10 +1,5 @@
-import { Terminal as xterm } from 'xterm';
+import { SocketConfig } from './constants/SocketConfig';
 
-declare const WebTerminal: (param: {
-    socket: {
-        init: (term: xterm) => void;
-        execute: (command: string) => void;
-    };
-}) => React.ReactElement;
+declare const WebTerminal: (param: { socket: SocketConfig }) => React.ReactElement;
 
 export default WebTerminal;
