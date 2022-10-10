@@ -2,7 +2,7 @@ import React from 'react';
 import WebTerminal from 'WebTerminal';
 
 import '../lib/node_modules/xterm/css/xterm.css';
-import SocketConfig from './config/Socket';
+import SocketConfig from './config/SocketConfig';
 
 const App = () => {
     const socketConfig = new SocketConfig();
