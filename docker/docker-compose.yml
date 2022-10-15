@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  front:
+    container_name: webterminal-front
+    image: webterminal-front:dev
+    volumes:
+      - ../frontend:/home/node
+    ports:
+      - 3000:3000
+    entrypoint: "/entrypoint.sh"
+  server:
+    container_name: webterminal-server
+    image: webterminal-server:dev
+    volumes:
+      - ../server:/home/node
+    ports:
+      - 3001:3001
+    entrypoint: "/entrypoint.sh"
